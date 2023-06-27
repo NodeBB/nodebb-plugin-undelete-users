@@ -2,7 +2,9 @@
 
 /* globals $, ajaxify, app, define */
 
-define('admin/plugins/undelete-users', ['api', 'bootbox'], function (api, bootbox) {
+define('admin/plugins/undelete-users', [
+	'api', 'bootbox', 'alerts'
+], function (api, bootbox, alerts) {
 	const ACP = {};
 	const PLUGIN_ID = 'undelete-users';
 	let itemContainer;
@@ -30,8 +32,8 @@ define('admin/plugins/undelete-users', ['api', 'bootbox'], function (api, bootbo
 					$tmpPwCon.show(500);
 					$item.remove();
 				});
-				app.alertSuccess('User restored. To make changes effective, you may need to restart your NodeBB instance.');
-			}).catch(app.alertError);
+				alerts.success('User restored. To make changes effective, you may need to restart your NodeBB instance.');
+			}).catch(alerts.error);
 		});
 	}
 
@@ -53,7 +55,7 @@ define('admin/plugins/undelete-users', ['api', 'bootbox'], function (api, bootbo
 				el.remove();
 			}
 		} catch (err) {
-			app.alertError(err);
+			alerts.error(err);
 		}
 	}
 

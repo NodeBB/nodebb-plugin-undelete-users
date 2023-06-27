@@ -7,12 +7,6 @@
 		{ "hook": "static:api.routes", "method": "addRoutes" },
 		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" }
 	],
-	"staticDirs": {
-		"static": "./static"
-	},
-	"less": [
-		"static/style.less"
-	],
 	"modules": {
 		"../admin/plugins/undelete-users.js": "static/lib/admin.js"
 	},

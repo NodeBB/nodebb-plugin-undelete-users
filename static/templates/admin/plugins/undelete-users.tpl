@@ -1,8 +1,8 @@
 <div class="row events undelete-users">
 	<div class="col-lg-9">
-		<div class="panel panel-default">
-			<div class="panel-heading"><h3><i class="fa fa-user-cog"></i> Users to Undelete</h3></div>
-			<div class="panel-body">
+		<div class="card">
+			<div class="card-header"><i class="fa fa-user-cog"></i> Users to Undelete</div>
+			<div class="card-body">
 				{{{ if !visibleEventCount }}}
 				<div class="alert alert-info">There are no users to restore with their contents.</div>
 				{{{ end }}}
@@ -21,27 +21,27 @@
 		</div>
 	</div>
 	<div class="col-lg-3 acp-sidebar">
-		<div class="panel panel-default">
-			<div class="panel-heading">[[admin/advanced/events:filters]]</div>
-			<div class="panel-body">
+		<div class="card">
+			<div class="card-header">[[admin/advanced/events:filters]]</div>
+			<div class="card-body">
 				<form role="form" id="filters">
-					<div class="form-group">
-						<label for="username">[[admin/manage/users:search.username]]</label>
+					<div class="mb-3">
+						<label class="form-label" for="username">[[admin/manage/users:search.username]]</label>
 						<input type="text" id="username" name="username" value="{query.username}" class="form-control" />
 					</div>
-					<div class="form-group">
+					<div class="mb-3">
 						<label for="uid">[[admin/manage/users:search.uid]]</label>
 						<input type="text" id="uid" name="uid" value="{query.uid}" class="form-control" />
 					</div>
-					<div class="form-group">
+					<div class="mb-3">
 						<label for="email">[[admin/manage/users:search.email]]</label>
 						<input type="text" id="email" name="email" value="{query.email}" class="form-control" />
 					</div>
-					<div class="form-group">
+					<div class="mb-3">
 						<label for="start">[[admin/advanced/events:filter-start]]</label>
 						<input type="date" id="start" name="start" value="{query.start}" class="form-control" />
 					</div>
-					<div class="form-group">
+					<div class="mb-3">
 						<label for="end">[[admin/advanced/events:filter-end]]</label>
 						<input type="date" id="end" name="end" value="{query.end}" class="form-control" />
 					</div>

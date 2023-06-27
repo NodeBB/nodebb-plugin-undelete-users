@@ -16,8 +16,8 @@ const plugin = module.exports;
 events.types.push(EVENT_NAME);
 
 plugin.init = async (params) => {
-	const { router, middleware } = params;
-	routeHelpers.setupAdminPageRoute(router, `/admin/plugins/${PLUGIN_ID}`, middleware, [], controllers.renderAdminPage);
+	const { router } = params;
+	routeHelpers.setupAdminPageRoute(router, `/admin/plugins/${PLUGIN_ID}`, controllers.renderAdminPage);
 };
 
 plugin.addRoutes = async ({ router, middleware, helpers }) => {
