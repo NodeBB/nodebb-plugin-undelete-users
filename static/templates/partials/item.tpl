@@ -1,9 +1,9 @@
 <li data-type="item" class="list-group-item{{{ if events.hide }}} hidden{{{ end }}}">
     <div class="row">
         <div class="col-9">
-            <div><strong>Username:</strong> {events.data.username} <span class="text-sm">(uid {events.data.targetUid})</span></div>
-            {{{ if events.data.email }}}
-            <div><strong>Email:</strong> {events.data.email}</div>
+            <div><strong>Username:</strong> {events.username} <span class="text-sm">(uid {events.targetUid})</span></div>
+            {{{ if events.email }}}
+            <div><strong>Email:</strong> {events.email}</div>
             {{{ end }}}
             <div><strong>Content to associate with:</strong> <span class="label label-info">{events.topicCount}</span> topics and <span class="label label-info">{events.postCount}</span> posts, with <span class="label label-info">{events.reputation}</span> reputation</div>
         </div>

@@ -3,10 +3,10 @@
 		<div class="card">
 			<div class="card-header"><i class="fa fa-user-cog"></i> Users to Undelete</div>
 			<div class="card-body">
-				{{{ if !visibleEventCount }}}
+				{{{ if !events.length }}}
 				<div class="alert alert-info">There are no users to restore with their contents.</div>
 				{{{ end }}}
-				<ul data-type="list" class="list-group">
+				<ul data-type="list" class="list-group mb-2">
 					{{{ each events }}}
 						<!-- IMPORT partials/item.tpl -->
 					{{{ end }}}
@@ -15,7 +15,7 @@
 					{{{ end }}}
 				</ul>
 				{{{ if loadMore }}}
-				<button type="button" data-page="{loadPage}" class="btn btn-block btn-info load-more">Load more</button>
+				<button type="button" data-page="{loadPage}" class="btn btn-info w-100 load-more">Load more</button>
 				{{{ end }}}
 			</div>
 		</div>
