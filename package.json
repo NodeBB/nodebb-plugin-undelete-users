@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-undelete-users",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A NodeBB plugin to re-associate deleted users with their content that are not removed.",
   "main": "library.js",
   "repository": {
