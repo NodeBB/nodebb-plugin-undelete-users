@@ -1,9 +1,8 @@
 'use strict';
 
-/* globals $, ajaxify, app, define */
 
 define('admin/plugins/undelete-users', [
-	'api', 'bootbox', 'alerts'
+	'api', 'bootbox', 'alerts',
 ], function (api, bootbox, alerts) {
 	const ACP = {};
 	const PLUGIN_ID = 'undelete-users';

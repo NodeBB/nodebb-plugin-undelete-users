@@ -1,7 +1,7 @@
 'use strict';
 
-const events = require.main.require('./src/events');
-const routeHelpers = require.main.require('./src/routes/helpers');
+const events = nodebb.require('./src/events');
+const routeHelpers = nodebb.require('./src/routes/helpers');
 
 const controllers = require('./lib/controllers');
 
